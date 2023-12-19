@@ -4,8 +4,8 @@
 
 ## Overview
 
-This project chronicles a comprehensive vulnerability management exercise, where we employed Qualys to scan a Windows VM with outdated applications, then reassessed post-remediation actions, showcasing the effectiveness of vulnerability management protocols.
-The "Qualys Quest Analysis" project delineates a systematic approach to vulnerability management using the Qualys platform. We focus on the meticulous analysis of scan data via pivot tables in Google Sheets, highlighting the evolution of system vulnerabilities under varying conditions.
+Qualys is a cloud-based service that provides automated vulnerability scanning and management. In this project, we'll leverage Qualys to perform comprehensive scans on a Windows virtual machine. We'll start by installing outdated versions of widely used software, WinRAR and Firefox, to simulate a common security oversight. Following the initial scan to assess the vulnerability landscape, we'll analyze the results using pivot tables in Google Sheets. The project will then progress through cycles of remediation and rescanning to measure the impact of updates and security improvements. Finally, we'll document the entire process and findings in a detailed report, providing insights into effective vulnerability management practices.
+
 
 ## Goals
 
