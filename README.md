@@ -10,13 +10,13 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ## Tools and Resources
 
 - **VirtualBox**: To host the Windows VM.
-- Windows 10
-- **Qualys**: For conducting vulnerability scans.
-- **Google Sheets**:
-- old versions website for firefox and winrar
-- **NVD
-- mitre cve
-- 
+- **Windows 10**: The operating system for the VM.
+- **Qualys**: For conducting comprehensive vulnerability scans.
+- **Google Sheets**: For data analysis and visualization using pivot tables.
+- **OldVersions.com**: To source outdated software versions of Firefox and WinRAR.
+- **National Vulnerability Database (NVD)**: For referencing detailed vulnerability data.
+- **MITRE CVE**: For accessing Common Vulnerabilities and Exposures information.
+
 
 
 <details>
