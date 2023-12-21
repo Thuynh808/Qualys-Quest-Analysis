@@ -18,12 +18,36 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 - **MITRE CVE**: For accessing Common Vulnerabilities and Exposures information.
 
 
-<details>
-<summary><h2><b>Section 1: Initial Setup</b></h2></summary>
-  The foundational stage involving the creation of a NAT network, installation of the Windows VM, and setup of outdated applications to simulate vulnerabilities.
-  
-  <!-- Include any relevant commands or screenshots -->
-</details>
+## Section 1: Initial Setup
+
+To begin, we start by preparing our virtual environment for the vulnerability assessment. We'll establish a network, set up a Windows virtual machine, and install outdated versions of software known for their vulnerabilities.
+
+### Creating a NAT Network
+1. Open the **Oracle VM VirtualBox Manager**.
+2. Go to `File > Host Network Manager`.
+3. Create a new NAT Network, ensuring DHCP is enabled for automatic IP address assignment.
+
+### Installing Windows
+1. Create a new virtual machine within VirtualBox, selecting your preferred version of Windows.
+2. Under the VM settings, go to the `Network` section and attach the VM to your created NAT Network.
+
+### Installing Outdated Applications
+1. Use a search engine to find and download old versions of Firefox and WinRAR.
+2. From a trusted archive site, download Mozilla Firefox version 2.0.0.11 and WinRAR 3.62.
+3. Install both applications on the Windows VM, which will later be scanned for vulnerabilities.
+
+Remember to execute these steps in a controlled environment, as outdated applications can pose security risks.
+
+![VirtualBox Manager](link-to-screenshot)
+![Creating NAT Network](link-to-screenshot)
+![VM Network Settings](link-to-screenshot)
+![Google Search for Old Versions](link-to-screenshot)
+![Downloading Firefox](link-to-screenshot)
+![Downloading Firefox1](link-to-screenshot)
+![Downloading WinRAR](link-to-screenshot)
+![Installing WinRAR](link-to-screenshot)
+![Installing Firefox](link-to-screenshot)
+
 
 <details>
 <summary><h2><b>Section 2: Virtual Scanner Setup</b></h2></summary>
