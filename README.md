@@ -18,9 +18,9 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 - **MITRE CVE**: For accessing Common Vulnerabilities and Exposures information.
 
 
-## Section 1: Initial Setup
-
-To begin, we start by preparing our virtual environment for the vulnerability assessment. We'll establish a network, set up a Windows virtual machine, and install outdated versions of software known for their vulnerabilities.
+<details>
+<summary><h2><b>Section 1: Initial Setup</b></h2></summary>
+  To begin, we start by preparing our virtual environment for the vulnerability assessment. We'll establish a network, set up a Windows virtual machine, and install outdated versions of software known for their vulnerabilities.
 
 ### Creating a NAT Network
 1. Open the **Oracle VM VirtualBox Manager**.
@@ -48,6 +48,7 @@ Remember to execute these steps in a controlled environment, as outdated applica
 ![Installing WinRAR](link-to-screenshot)
 ![Installing Firefox](link-to-screenshot)
 
+</details>
 
 <details>
 <summary><h2><b>Section 2: Virtual Scanner Setup</b></h2></summary>
