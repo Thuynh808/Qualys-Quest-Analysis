@@ -18,8 +18,78 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 - **MITRE CVE**: For accessing Common Vulnerabilities and Exposures information.
 
 
+<details>
+<summary><h2><b>Section 1: Initial Setup</b></h2></summary>
+  The foundational stage involving the creation of a NAT network, installation of the Windows VM, and setup of outdated applications to simulate vulnerabilities.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
 
 <details>
-  <summary><h2><b>Section 1: Initial Setup</b></h2></summary>
+<summary><h2><b>Section 2: Virtual Scanner Setup</b></h2></summary>
+  Steps for downloading and configuring the Qualys virtual scanner appliance within VirtualBox.
   
-  Detailed steps of setting up the VM, installing outdated applications,
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+<details>
+<summary><h2><b>Section 3: Asset Configuration</b></h2></summary>
+  Configuring assets in Qualys and setting up authentication records for accurate vulnerability scanning.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+<details>
+<summary><h2><b>Section 4: Scanning</b></h2></summary>
+  Conducting the initial vulnerability scan with Qualys to identify potential security risks.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+<details>
+<summary><h2><b>Section 5: Analyzing Results</b></h2></summary>
+  Analyzing the initial scan results to identify and prioritize vulnerabilities.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+<details>
+<summary><h2><b>Section 6: Remediation and Second Scan</b></h2></summary>
+  Describing the process of uninstalling outdated applications, remediation actions taken, and performing the second scan.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+<details>
+<summary><h2><b>Section 7: Further Analysis and Remediation</b></h2></summary>
+  Updating Windows, applying Microsoft service updates, and conducting further vulnerability remediation.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+<details>
+<summary><h2><b>Section 8: Third Scan</b></h2></summary>
+  Executing the third scan post-updates to assess the impact on the system's security.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+<details>
+<summary><h2><b>Section 9: Pivot Table Creation</b></h2></summary>
+  Developing pivot tables in Google Sheets for a clear representation of vulnerabilities, aiding in remediation decisions.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+<details>
+<summary><h2><b>Section 10: Trend Report Generation</b></h2></summary>
+  Using the data from pivot tables to compile a trend report, illustrating the efficacy of the vulnerability management process throughout the project.
+  
+  <!-- Include any relevant commands or screenshots -->
+</details>
+
+## Conclusion
+
+A reflection on the project's outcomes and the importance of continuous vulnerability management in maintaining system security.
+
+<!-- Include any final thoughts or screenshots -->
