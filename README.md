@@ -253,7 +253,7 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
     - Set the following parameters:
       - Title: `Win10 Authenticated Scan`
       - Option Profile: `Basic Win10 Scan`
-      - Scanner Appliance: `StreetracVA`
+      - Scanner Appliance: `StreetrackVA`
       - IPv4 Address: `10.2.22.5`
       - Click on `Launch` once the settings are set.
 
@@ -268,10 +268,101 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 
 <details>
 <summary><h2><b>Section 5: Analyzing and Prioritizing Results</b></h2></summary>
-  Analyzing the initial scan results to identify and prioritize vulnerabilities.
+  This phase involves a detailed review of the vulnerabilities identified during the scan. The goal here is to prioritize these findings based on the risk they pose to our environment. Prioritization ensures that we address the most significant threats first, aligning our remediation efforts with the potential impact. Let's break down the results and understand how to navigate through them.
+
+  <details>
+  <summary><h3>Understanding the Scan Summary</h3></summary>
+    
+  In the realm of vulnerability management, the severity of the vulnerabilities dictates the urgency and priority with which they must be addressed. Our scan results have highlighted that:
+
+  **Critical and High Vulnerabilities:**
+    - Severity 5 (Critical) and Severity 4 (High) vulnerabilities are the most prominent in the scan results.
+    - These categories represent the most severe and pressing security issues that need immediate attention due to the high risk they pose.
+    - We will focus on remedying Severity 5 and 4 vulnerabilities as they are akin to critical and high threats to our network's security.
+    - Swift action on these vulnerabilities is essential to mitigate the risk of potential breaches or security incidents.
+
+  **Vulnerability Breakdown:**
+    - Total Reported Vulnerabilities: 442
+    - Severity 5 Vulnerabilities: 42
+    - Severity 4 Vulnerabilities: 148
+    - Severity 3 Vulnerabilities: 58 confirmed, 3 potential
+    - Severity 2 Vulnerabilities: 16 confirmed, 2 potential
+    - Severity 1 Vulnerabilities: None reported
+    - Information Gathered: 173
+      - It's noteworthy that out of the 442 vulnerabilities, 173 are categorized as 'Information Gathered'. These entries are not actual vulnerabilities but rather informational items that may include best practices, configuration details, or other non-critical findings.
+    - Security Risk Average:
+      - The average security risk score of 5.0, a critical-risk posture, underscores the necessity for a thorough review and rapid response plan.
+    
+  By concentrating on the vulnerabilities with the highest severity first and undrestand the difference between true vulnerabilities and informational findings, we can efficiently allocate our resources towards enhancing our security posture and reducing the risk landscape. 
+
+  ***For the remainder of this project, we will only focus on critical and high severity vulnerabilities***
+
+![Scan Summary](https://i.imgur.com/CxloV6f.png)<br><br>
+
+  </details>
+
+  <details>
+  <summary><h3>Reviewing Vulnerabilities by Severity</h3></summary>
   
-  <!-- Include any relevant commands or screenshots -->
+  - Focus on the vulnerabilities categorized by severity level, giving immediate attention to the most severe (level 5).
+  - Assess which categories, such as 'Local', 'Security Policy', or 'Windows', have the highest number of vulnerabilities.
+
+![Vulnerabilities by Severity](link-to-screenshot-2)<br><br>
+
+  </details>
+
+  <details>
+  <summary><h3>Examining Detailed Results</h3></summary>
+  
+  - Dive into the detailed results for a granular view of each vulnerability.
+  - Understand the nature of each vulnerability and its potential impact on your system.
+
+![Detailed Results](link-to-screenshot-3)<br><br>
+
+  </details>
+
+  <details>
+  <summary><h3>Investigating Individual Vulnerabilities</h3></summary>
+  
+  - Select individual vulnerabilities to explore detailed descriptions, threat levels, and impacts.
+  - Look for suggested solutions or patches provided for each issue.
+
+![Individual Vulnerability](link-to-screenshot-4)<br><br>
+
+  </details>
+
+  <details>
+  <summary><h3>Researching CVE Details</h3></summary>
+  
+  - For vulnerabilities associated with CVE IDs, research the specific CVE details.
+  - Utilize resources like the National Vulnerability Database for in-depth information.
+
+![CVE Details](link-to-screenshot-5)<br><br>
+
+  </details>
+
+  <details>
+  <summary><h3>Understanding Exploitability and Mitigation</h3></summary>
+  
+  - Evaluate the exploitability of each vulnerability and existing mitigation measures.
+  - Prioritize vulnerabilities with high exploitability and those without current mitigation.
+
+![Exploitability and Mitigation](link-to-screenshot-6)<br><br>
+
+  </details>
+
+  By carefully analyzing and prioritizing the scan results, we can develop an effective plan to mitigate risks. This process forms the foundation of proactive vulnerability management, guiding us towards a more secure infrastructure.
+
 </details>
+
+
+
+
+
+
+
+
+
 
 <details>
 <summary><h2><b>Section 6: Remediation and Second Scan</b></h2></summary>
