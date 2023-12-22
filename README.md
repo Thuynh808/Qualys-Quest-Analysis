@@ -115,7 +115,8 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 <summary><h2><b>Section 3: Configuring Asset for Authenticated Scan</b></h2></summary>
   Setting up for an authenticated scan ensures a more thorough assessment by allowing the scanner to log into the system. This allows for deeper vulnerability detection. Lets go over the steps to configure our asset, Windows VM, for an authenticated scan.<br><br>
 
-  - **Step 1: Adding VM's IP Range to Qualys Asset Groups**
+  <details>
+  <summary><h3>Step 1: Adding VM's IP Range to Qualys Asset Groups</h3></summary>
     - Navigate to the `Assets` tab on the Qualys platform
     - Click `Add IPs for Scanning`
     - Click on `New` > `IP Tracked Addresses`
@@ -126,47 +127,86 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 ![Add IPs for Scanning1](https://i.imgur.com/azzU5Sz.png)<br><br>
 ![Add IPs for Scanning2](https://i.imgur.com/sUFpZU4.png)<br><br>
 ![Add IPs for Scanning3](https://i.imgur.com/3idJ36o.png)<br><br>
+  
+  </details>
 
-  - **Step 2: Configuring Windows Firewall & Services**
-    - On your Windows VM, open the `Windows Defender Firewall` settings.
+  <details>
+  <summary><h3>Step 2: Configuring Windows Firewall</h3></summary>
+    - On our Windows VM, open the `Windows Defender Firewall` settings.
     - Disable the firewall for private and public networks to allow for unobstructed scanning.
-    - Navigate to `Services` and ensure that the `Remote Registry` service is running. This service is needed for Qualys to perform authenticated scans.
+    
+![Windows Defender Firewall](https://i.imgur.com/lON4BHQ.png)<br><br>
+![Windows Defender Firewall](https://i.imgur.com/Wd19tHy.png)<br><br>
+![Turn Off Firewall](https://i.imgur.com/pYdbWAH.png)<br><br>
 
-![Windows Defender Firewall](https://i.imgur.com/your-image-link.png)
-![Turn Off Firewall](https://i.imgur.com/your-image-link.png)
-![Services App](https://i.imgur.com/your-image-link.png)
-![Remote Registry Service](https://i.imgur.com/your-image-link.png)
+  </details>
+  
+  <details>
+  <summary><h3>Step 3: Configuring Windows Services</h3></summary>
+    - Navigate to `Services` and ensure that the `Remote Registry` service is set to `Automatic` and click `Start`. This service is needed for Qualys to perform authenticated scans.
+    - In `User Account Control` settings, adjust to `Never Notify`
 
-<details>
-<summary><h3>Step 1: Adding VM's IP Range to Qualys Asset Groups</h3></summary>
-<p>
-Navigate to the 'Assets' tab on the Qualys platform, select 'Add IPs for Scanning', click on 'New' > 'IP Tracked Addresses', and enter the IP range `10.2.22.2-10.2.22.20`. Save the configuration to include these IPs in future scans.
-</p>
-<!-- Add your images here if needed -->
+![Services1](https://i.imgur.com/ReBiS2P.png)<br><br>
+![Services2](https://i.imgur.com/hifxTFe.png)<br><br>
+![Services3](https://i.imgur.com/YMDHjIz.png)<br><br>
+![Services4](https://i.imgur.com/zVDXJQI.png)<br><br>
+
+  </details>
+
+  <details>
+  <summary><h3>Step 4: Configuring Registry Editor</h3></summary>
+    - Open `Registry Editor` and navigate to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
+    - Right-click and choose `New` > `DWORD`
+    - Fill in the following details:
+      - Value Name: LocalAccountTokenFilterPolicy
+      - Value Data: 1
+
+![Registry Editor](https://i.imgur.com/gWuZE4g.png)<br><br>
+![Registry Editor1](https://i.imgur.com/W140kFX.png)<br><br>
+![Registry Editor2](https://i.imgur.com/ZBHXccp.png)<br><br>
+
+  </details>
+
+  <details>
+  <summary><h3>Step 5: Adding Credentials to Qualys</h3></summary>
+    - Navigate back to the Qualys platform and go to the `Scans` tab.
+    - Under the 'Authentication' tab, click `New` then choose `Operating Systems` and select `Windows`
+    - For the 'Record Title', enter "Win 10 Credentials"
+    - Select 'Local' under 'Windows Authentication' and fill out the login credentials for the Windows VM:
+      - Username: `Streetrack`
+      - Password: `*********`
+    - In the 'IPs' section, input the IP address of the Windows VM: `10.2.22.5`
+
+![Cred1](https://i.imgur.com/0TpwIyi.png)<br><br>
+![Cred2](https://i.imgur.com/9Fyhwfw.png)<br><br>
+![Cred3](https://i.imgur.com/s9IqGz8.png)<br><br>
+![Cred4](https://i.imgur.com/sIFP9pB.png)<br><br>
+
+With these credentials, Qualys will be able to perform a more thorough authenticated scan on your VM.
+
+  </details>
+
+  <details>
+  <summary><h3>Step 6: Configuring the Option Profile for Scanning</h3></summary>
+  
+  With the credentials in place, the next step is to configure the scanning parameters within Qualys.
+
+  - Select the `Option Profiles` tab and select `New` > `Option Profile` from the dropdown
+  - Enter "Basic Win10 Scan" as the title for the option profile and select our username as the owner
+  - Next, navigate to `Scan` section and choose `Standard Scan` to select about 1,900 common TCP ports for scanning. This is a balance between speed and coverage.
+  - Lastly, scroll down and under `Authentication` select `Windows` checkbox This will enable the scanner to use the provided Windows credentials during the scan.
+
+![Option Profile](https://i.imgur.com/bTfoF6p.png)<br><br>
+![Option Profile Title](https://i.imgur.com/9Fyhwfw.png)<br><br>
+![Scan TCP Ports](https://i.imgur.com/nnIVNhy.png)<br><br>
+![Authentication](https://i.imgur.com/UO8B8sY.png)<br><br>
+
+  After configuring these options, we'll save the profile. We can now use this option profile to perform authenticated scans on our Windows VM, allowing for a more comprehensive vulnerability assessment.
+
+  </details>
+
 </details>
 
-<details>
-<summary><h3>Step 2: Configuring Windows Firewall & Services</h3></summary>
-<p>
-On the Windows VM, open 'Windows Defender Firewall' settings and disable the firewall for private and public networks. Then, ensure the 'Remote Registry' service is running, which is required for Qualys to perform authenticated scans.
-</p>
-<!-- Add your images here if needed -->
-</details>
-
-
-
-
-
-
-
-
-  - **Step 3: Finalizing VM Preparation**
-    - Confirm that all necessary services are running and the firewall settings are configured.
-    - Perform a final check by pinging the Qualys scanner from the VM to ensure network connectivity.
-
-Once these steps are completed, your VM is ready for an authenticated scan using Qualys.
-
-</details>
 
 
 
