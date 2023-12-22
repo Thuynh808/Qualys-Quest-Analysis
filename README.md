@@ -122,10 +122,10 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
     - Enter the IP range of: `10.2.22.2-10.2.22.20`
     - Save the configuration to ensure these IPs are included in scans
 
-![Assets Tab](https://i.imgur.com/your-image-link.png)<br><br>
-![Add IPs for Scanning1](https://i.imgur.com/your-image-link.png)<br><br>
-![Add IPs for Scanning2](https://i.imgur.com/your-image-link.png)<br><br>
-![Add IPs for Scanning3](https://i.imgur.com/your-image-link.png)<br><br>
+![Assets Tab](https://i.imgur.com/f1CeEDI.png)<br><br>
+![Add IPs for Scanning1](https://i.imgur.com/azzU5Sz.png)<br><br>
+![Add IPs for Scanning2](https://i.imgur.com/sUFpZU4.png)<br><br>
+![Add IPs for Scanning3](https://i.imgur.com/3idJ36o.png)<br><br>
 
   - **Step 2: Configuring Windows Firewall & Services**
     - On your Windows VM, open the `Windows Defender Firewall` settings.
