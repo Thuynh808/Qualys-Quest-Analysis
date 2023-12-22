@@ -21,33 +21,44 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 <details>
 <summary><h2><b>Section 1: Initial Setup</b></h2></summary>
   To begin, we start by preparing our virtual environment for the vulnerability assessment. We'll establish a network, set up a Windows virtual machine, and install outdated versions of software known for their vulnerabilities.<br><br>
+
+  <details>
+  <summary><h3>Step 1: Creating a NAT Network</h3></summary>
   
-  - **Step 1: Creating a NAT Network**
-    - Open VirtualBox and go to `File > Tools > Host Network Manager`
-    - Click on the `NAT Networks` tab and Create with the following details:
-      - Name: `NatNetwork`
-      - Ipv4: `10.2.22.0/24`
-      - DHCP: `Enabled`
+  - Open VirtualBox and go to `File > Tools > Host Network Manager`
+  - Click on the `NAT Networks` tab and Create with the following details:
+    - Name: `NatNetwork`
+    - Ipv4: `10.2.22.0/24`
+    - DHCP: `Enabled`
 
 ![VirtualBox Manager](https://i.imgur.com/QZRWNRR.png)<br><br>
 ![Creating NAT Network](https://i.imgur.com/zt1VLMW.png)<br><br>
 
-  - **Step 2: Assign Windows VM to NatNetwork**
-    - Create a Windows virtual machine in VirtualBox and configure our network settings to use our created Nat Network: `NatNetwork`
+  </details>
 
-![VM Network Settings](https://i.imgur.com/74elGnG.png)
-<br><br>
+  <details>
+  <summary><h3>Step 2: Assign Windows VM to NatNetwork</h3></summary>
 
-  - **Step 3: Installing Outdated Applications**
-    - Open a browser and Search for `Old Version`
-    - Click on the `OldVersion.com` link and search for Mozilla Firefox and WinRAR
-    - Download and Install both applications
+  - Create a Windows virtual machine in VirtualBox and configure our network settings to use our created Nat Network: `NatNetwork`
+
+![VM Network Settings](https://i.imgur.com/74elGnG.png)<br><br>
+
+  </details>
+
+  <details>
+  <summary><h3>Step 3: Installing Outdated Applications</h3></summary>
+
+  - Open a browser and Search for `Old Version`
+  - Click on the `OldVersion.com` link and search for Mozilla Firefox and WinRAR
+  - Download and Install both applications
    
 ![Google Search for Old Version](https://i.imgur.com/fVKK6lf.png)<br><br>
 ![Downloading Firefox](https://i.imgur.com/bU6ZuCT.png)<br><br>
 ![Downloading Firefox1](https://i.imgur.com/O0eNVUx.png)<br><br>
 ![Downloading WinRAR](https://i.imgur.com/6qAGRWv.png)<br><br>
 ![Installing WinRAR & Firefox](https://i.imgur.com/DEaNp0z.png)<br><br>
+
+  </details>
 
   Great! We've now created our Windows VM with outdated versions of Firefox and WinRAR installed. This machine will be used to find vulnerabilities for us to analyze and remediate. Next, we will download and install our Virtual Scanner from Qualys.
 
@@ -56,13 +67,15 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 <details>
 <summary><h2><b>Section 2: Setting Up the Virtual Scanner</b></h2></summary>
   This section involves downloading the Qualys Virtual Scanner and configuring it to work with our virtual environment assuming we've already subscribed for the Community Edition of Qualys.<br><br>
-  
-  - **Step 1: Downloading the Scanner**
-    - Access the Qualys platform and in the Getting Started section, click on `Download a virtual scanner`
-    - Start the wizard to configure our scanner
-    - Choose `VMware ESXi, vCenter Server` as the virtualization platform and provide the name `StreetrackVA` for our scanner
-    - Download the scanner appliance image to the local machine
-    - Take note of the provided Personalization Code for later use
+
+  <details>
+  <summary><h3>Step 1: Downloading the Scanner</h3></summary>
+    
+  - Access the Qualys platform and in the Getting Started section, click on `Download a virtual scanner`
+  - Start the wizard to configure our scanner
+  - Choose `VMware ESXi, vCenter Server` as the virtualization platform and provide the name `StreetrackVA` for our scanner
+  - Download the scanner appliance image to the local machine
+  - Take note of the provided Personalization Code for later use
 
 ![Add New Virtual Scanner](https://i.imgur.com/HVC48hW.png)<br><br>
 ![Start Wizard](https://i.imgur.com/b8xA6Vs.png)<br><br>
@@ -70,12 +83,16 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ![Save Virtual Scanner](https://i.imgur.com/iNg3raU.png)<br><br>
 ![Personalization Code](https://i.imgur.com/BXVDIKb.png)<br><br>
 
-  - **Step 2: Importing and Configuring the Scanner Appliance**
-    - In VirtualBox, select `File` > `Import Appliance` and navigate to the downloaded scanner image
-    - Follow the prompts to import the scanner appliance
-    - Once imported, click on `Settings` > `Network` and choose:
-      - Attached to: `NAT Network`
-      - Name: `NatNetwork`
+  </details>
+
+  <details>
+  <summary><h3>Step 2: Importing and Configuring the Scanner Appliance</h3></summary>
+ 
+  - In VirtualBox, select `File` > `Import Appliance` and navigate to the downloaded scanner image
+  - Follow the prompts to import the scanner appliance
+  - Once imported, click on `Settings` > `Network` and choose:
+    - Attached to: `NAT Network`
+    - Name: `NatNetwork`
       
   This will ensure that the scanner and the Windows VM will be on the same network.<br><br>
       
@@ -84,29 +101,39 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ![Appliance Settings](https://i.imgur.com/VjhFhFZ.png)<br><br>
 ![Appliance Settings1](https://i.imgur.com/TbXOzSZ.png)<br><br>
 
-  - **Step 3: Personalizing the Scanner**
-    - Start the scanner VM and use the personalization code provided by Qualys to activate and configure the scanner.
-    - We'll be provided the IP address of our scanner once the personalization process is complete.
+  </details>
+
+  <details>
+  <summary><h3>Step 3: Personalizing the Scanner</h3></summary>
+
+  - Start the scanner VM and use the personalization code provided by Qualys to activate and configure the scanner.
+  - We'll be provided the IP address of our scanner once the personalization process is complete.
 
 ![Scanner Console1](https://i.imgur.com/DQBoKfE.png)<br><br>
 ![Personalization Progress](https://i.imgur.com/WYnAHVw.png)<br><br>
 ![Scanner Complete](https://i.imgur.com/sZx6T6X.png)<br><br>
 
-  - **Step 4: Finalizing Scanner Setup**
-    - Once the personalization is complete, verify that the scanner appears in our Qualys account with the correct LAN IP: `10.2.22.6`
-    - We'll also perform a connectivity test from the Windows VM to confirm the scanner is reachable.
-    - In the command prompt, run:<br><br>
-      ```cmd
-      ipconfig
-      ping 10.2.22.6
-      ```
-    - **Our IP Addresses:**
-      - Windows VM: `10.2.22.5`
-      - Qualys Scanner: `10.2.22.6`
+  </details>
+
+  <details>
+  <summary><h3>Step 4: Finalizing Scanner Setup</h3></summary>
+  
+  - Once the personalization is complete, verify that the scanner appears in our Qualys account with the correct LAN IP: `10.2.22.6`
+  - We'll also perform a connectivity test from the Windows VM to confirm the scanner is reachable.
+  - In the command prompt, run:<br><br>
+    ```cmd
+    ipconfig
+    ping 10.2.22.6
+    ```
+  - **Our IP Addresses:**
+    - Windows VM: `10.2.22.5`
+    - Qualys Scanner: `10.2.22.6`
             
 ![Activation Verification](https://i.imgur.com/NGzwDfe.png)<br><br>
 ![Appliances Tab](https://i.imgur.com/i6KX2gx.png)<br><br>
 ![Ping Test](https://i.imgur.com/ssnmMud.png)<br><br>
+
+  </details>
 
 Awesome! The Qualys Virtual Scanner is now up and running! In the next section, we'll configure our asset for an authenticated scan. 
 
