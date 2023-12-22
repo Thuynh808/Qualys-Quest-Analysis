@@ -47,8 +47,7 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ![Downloading Firefox](https://i.imgur.com/bU6ZuCT.png)<br><br>
 ![Downloading Firefox1](https://i.imgur.com/O0eNVUx.png)<br><br>
 ![Downloading WinRAR](https://i.imgur.com/6qAGRWv.png)<br><br>
-![Installing WinRAR](https://i.imgur.com/9bW08q4.png)<br><br>
-![Installing Firefox](https://i.imgur.com/FxHE8EV.png)<br><br>
+![Installing WinRAR & Firefox](https://i.imgur.com/DEaNp0z.png)<br><br>
 
   Great! We've now created our Windows VM with outdated versions of Firefox and WinRAR installed. This machine will be used to find vulnerabilities for us to analyze and remediate. Next, we will download and install our Virtual Scanner from Qualys.
 
