@@ -243,19 +243,28 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 
 </details>
 
-
-
-
-
-
-
-
-
 <details>
-<summary><h2><b>Section 4: Scanning</b></h2></summary>
-  Conducting the initial vulnerability scan with Qualys to identify potential security risks.
+<summary><h2><b>Section 4: Our First Scan</b></h2></summary>
   
-  <!-- Include any relevant commands or screenshots -->
+  Alright! Now we're ready to run our first authenicated scan! This will provide us with a view of gaps in our security and help us in securing them.
+
+  - **Step 1: Creating a New Scan**
+    - Navigate to `Scans` > `New` > `Scan`. The Launch Vulnerability Scan window will appear.
+    - Set the following parameters:
+      - Title: `Win10 Authenticated Scan`
+      - Option Profile: `Basic Win10 Scan`
+      - Scanner Appliance: `StreetracVA`
+      - IPv4 Address: `10.2.22.5`
+      - Click on `Launch` once the settings are set.
+
+![Scan1-1](https://i.imgur.com/hfeVUBD.png)<br><br>
+![Scan1-2](https://i.imgur.com/ssLOusJ.png)<br><br>
+![Scan1-3](https://i.imgur.com/FSF6P8K.png)<br><br>
+![Scan1-4](https://i.imgur.com/3iBaxZr.png)<br><br>
+
+  With our first scan completed, we are ready for the next phase of our security assessment: Analyze and Prioritization. The upcoming stage is necessary to the vulnerability management cycle, as it involves a careful examination of the identified vulnerabilities, ranking them based on their severity, and planning remediation efforts accordingly. By prioritizing effectively, we ensure that we address the most critical weaknesses first, bolstering our security posture where it matters most.
+
+
 </details>
 
 <details>
