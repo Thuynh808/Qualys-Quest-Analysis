@@ -99,19 +99,22 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
       ipconfig
       ping 10.2.22.6
       ```
+    - **IP Addresses:**
+      - Windows VM: 10.2.22.5
+      - Qualys Scanner: 10.2.22.6
             
 ![Activation Verification](https://i.imgur.com/NGzwDfe.png)<br><br>
 ![Appliances Tab](https://i.imgur.com/i6KX2gx.png)<br><br>
 ![Ping Test](https://i.imgur.com/ssnmMud.png)<br><br>
 
-Awesome! The Qualys Virtual Scanner is now up and running! In the next section, we'll configure our assets for an authentication scan. 
+Awesome! The Qualys Virtual Scanner is now up and running! In the next section, we'll configure our asset for an authenticated scan. 
 
 </details>
 
 
 <details>
-<summary><h2><b>Section 3: Asset Configuration</b></h2></summary>
-  Configuring assets in Qualys and setting up authentication records for accurate vulnerability scanning.
+<summary><h2><b>Section 3: Configuring Authenticated Scan</b></h2></summary>
+  In this section, we'll go over setting up our Windows VM for an authenticated scan. This is crucial to our vulnerability assessment. 
   
   <!-- Include any relevant commands or screenshots -->
 </details>
