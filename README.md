@@ -119,6 +119,47 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
   <!-- Include any relevant commands or screenshots -->
 </details>
 
+
+
+
+<details>
+<summary><h2><b>Section 3: Configuring Authenticated Scan</b></h2></summary>
+  Setting up for an authenticated scan ensures a more thorough assessment by allowing the scanner to log into the system. This allows for deeper vulnerability detection. Here's how to prepare the Windows VM for such a scan:
+
+  - **Step 1: Add VM IP to Qualys Asset Groups**
+    - Navigate to the `Assets` tab on the Qualys platform.
+    - Click `Add IPs for Scanning` under the `Assets` management section.
+    - Enter the IP range or specific IP of your VM.
+    - Save the configuration to ensure these IPs are included in scans.
+
+![Assets Tab](https://i.imgur.com/your-image-link.png)
+![Add IPs for Scanning](https://i.imgur.com/your-image-link.png)
+
+  - **Step 2: Configuring Windows Firewall & Services**
+    - On your Windows VM, open the `Windows Defender Firewall` settings.
+    - Disable the firewall for private and public networks to allow for unobstructed scanning.
+    - Navigate to `Services` and ensure that the `Remote Registry` service is running. This service is needed for Qualys to perform authenticated scans.
+
+![Windows Defender Firewall](https://i.imgur.com/your-image-link.png)
+![Turn Off Firewall](https://i.imgur.com/your-image-link.png)
+![Services App](https://i.imgur.com/your-image-link.png)
+![Remote Registry Service](https://i.imgur.com/your-image-link.png)
+
+  - **Step 3: Finalizing VM Preparation**
+    - Confirm that all necessary services are running and the firewall settings are configured.
+    - Perform a final check by pinging the Qualys scanner from the VM to ensure network connectivity.
+
+Once these steps are completed, your VM is ready for an authenticated scan using Qualys.
+
+</details>
+
+
+
+
+
+
+
+
 <details>
 <summary><h2><b>Section 4: Scanning</b></h2></summary>
   Conducting the initial vulnerability scan with Qualys to identify potential security risks.
