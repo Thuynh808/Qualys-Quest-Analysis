@@ -137,6 +137,29 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 ![Services App](https://i.imgur.com/your-image-link.png)
 ![Remote Registry Service](https://i.imgur.com/your-image-link.png)
 
+<details>
+<summary><h3>Step 1: Adding VM's IP Range to Qualys Asset Groups</h3></summary>
+<p>
+Navigate to the 'Assets' tab on the Qualys platform, select 'Add IPs for Scanning', click on 'New' > 'IP Tracked Addresses', and enter the IP range `10.2.22.2-10.2.22.20`. Save the configuration to include these IPs in future scans.
+</p>
+<!-- Add your images here if needed -->
+</details>
+
+<details>
+<summary><h3>Step 2: Configuring Windows Firewall & Services</h3></summary>
+<p>
+On the Windows VM, open 'Windows Defender Firewall' settings and disable the firewall for private and public networks. Then, ensure the 'Remote Registry' service is running, which is required for Qualys to perform authenticated scans.
+</p>
+<!-- Add your images here if needed -->
+</details>
+
+
+
+
+
+
+
+
   - **Step 3: Finalizing VM Preparation**
     - Confirm that all necessary services are running and the firewall settings are configured.
     - Perform a final check by pinging the Qualys scanner from the VM to ensure network connectivity.
