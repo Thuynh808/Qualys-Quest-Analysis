@@ -4,7 +4,7 @@
 
 ## Overview
 
-Qualys is a cloud-based service that provides vulnerability scanning and management. In this project, we'll leverage Qualys to perform comprehensive scans on a Windows virtual machine. We'll start by installing outdated versions of widely used software, WinRAR and Firefox, to simulate a common security oversight. Following the initial scan to assess the vulnerability landscape, we'll analyze the results using pivot tables in Google Sheets. The project will then progress through cycles of remediation and rescanning to measure the impact of updates and security improvements. Finally, we'll document the entire process and findings in a detailed report, providing insights into effective vulnerability management practices.
+Qualys is a cloud-based service that provides vulnerability scanning and management. In this project, we'll leverage Qualys to perform comprehensive scans on a Windows virtual machine. We'll start by installing outdated versions of widely used software, WinRAR and Firefox, to simulate a common security oversight. The project will then progress through cycles of remediation and rescanning to measure the impact of updates and security improvements. We'll use Google Sheets to create pivot tables for a clear view of vulnerabilities, aiding in both remediation and reporting. Finally, we'll document the entire process and findings in a detailed report, providing insights into effective vulnerability management practices.
 
 
 ## Tools and Resources
@@ -13,7 +13,7 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 - **Windows 10**: The operating system for the VM.
 - **Qualys**: For conducting comprehensive vulnerability scans.
 - **Google Sheets**: For data analysis and visualization using pivot tables.
-- **OldVersions.com**: To source outdated software versions of Firefox and WinRAR.
+- **OldVersion.com**: To source outdated software versions of Firefox and WinRAR.
 - **National Vulnerability Database (NVD)**: For referencing detailed vulnerability data.
 - **MITRE CVE**: For accessing Common Vulnerabilities and Exposures information.
 
@@ -30,18 +30,17 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
       - DHCP: Enabled
 
 ![VirtualBox Manager](https://i.imgur.com/QZRWNRR.png)<br><br>
-![Creating NAT Network](https://i.imgur.com/zt1VLMW.png)
-<br><br>
+![Creating NAT Network](https://i.imgur.com/zt1VLMW.png)<br><br>
 
   - **Step 2: Assign Windows VM to NatNetwork**
-    - Create a Windows virtual machine in VirtualBox and configure our network settings to use our created Nat Network: `NATNetwork`
+    - Create a Windows virtual machine in VirtualBox and configure our network settings to use our created Nat Network: `NatNetwork`
 
 ![VM Network Settings](https://i.imgur.com/74elGnG.png)
 <br><br>
 
   - **Step 3: Installing Outdated Applications**
     - Open a browser and Search for `Old Version`
-    - Click on the `OldVersion.com` link and search for Mozilla Firefox and Winrar
+    - Click on the `OldVersion.com` link and search for Mozilla Firefox and WinRAR
     - Download and Install both applications
    
 ![Google Search for Old Version](https://i.imgur.com/fVKK6lf.png)<br><br>
@@ -49,8 +48,7 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ![Downloading Firefox1](https://i.imgur.com/O0eNVUx.png)<br><br>
 ![Downloading WinRAR](https://i.imgur.com/6qAGRWv.png)<br><br>
 ![Installing WinRAR](https://i.imgur.com/9bW08q4.png)<br><br>
-![Installing Firefox](https://i.imgur.com/FxHE8EV.png)
-<br><br>
+![Installing Firefox](https://i.imgur.com/FxHE8EV.png)<br><br>
 
   Great! We've now created our Windows VM with outdated versions of Firefox and WinRAR installed. This machine will be used to find vulnerabilities for us to analyze and remediate. Next, we will download and install our Virtual Scanner from Qualys.
 
@@ -60,16 +58,18 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 <summary><h2><b>Section 2: Setting Up the Virtual Scanner</b></h2></summary>
   This section involves downloading the Qualys Virtual Scanner and configuring it to work with our virtual environment assuming we've already subscribed for the Community Edition of Qualys.<br><br>
   
-  - **Step 1: Downloading the Scanner**
-    - Access the Qualys platform and navigate to `Scans` > `Appliances` and click on `Download a virtual scanner`
-  
-  ![Qualys Platform Download](Screenshot_Link_1.png)<br><br>
+  - **Step 1: Downloading and Configuring the Scanner**
+    - Access the Qualys platform and in the Getting Started section, click on `Download a virtual scanner`
+    - Start the wizard to configure our scanner
+    - Choose `VMware ESXi, vCenter Server` as the virtualization platform and provide the name `StreetrackVA` for our scanner
+    - Download the scanner appliance image to our local machine
+    - We'll take note of the provided Personalization Code for later use
 
-  - **Step 2: Configuring the Scanner**
-    - Choose your virtualization platform and provide a name for your scanner.
-    - Download the scanner appliance image to your local machine.
-    ![Add New Virtual Scanner](Screenshot_Link_2.png)<br><br>
-    ![Save Virtual Scanner](Screenshot_Link_3.png)<br><br>
+![Add New Virtual Scanner](https://i.imgur.com/HVC48hW.png)<br><br>
+![Start Wizard](https://i.imgur.com/b8xA6Vs.png)<br><br>
+![Configure Platform and Name](https://i.imgur.com/Njc80LI.png)<br><br>
+![Save Virtual Scanner](https://i.imgur.com/iNg3raU.png)<br><br>
+![Personalization Code](https://i.imgur.com/BXVDIKb.png)<br><br>
 
   - **Step 3: Importing the Scanner Appliance**
     - In VirtualBox, select 'File > Import Appliance' and navigate to the downloaded scanner image.
