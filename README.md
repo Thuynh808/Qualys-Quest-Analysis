@@ -57,12 +57,12 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 <summary><h2><b>Section 2: Setting Up the Virtual Scanner</b></h2></summary>
   This section involves downloading the Qualys Virtual Scanner and configuring it to work with our virtual environment assuming we've already subscribed for the Community Edition of Qualys.<br><br>
   
-  - **Step 1: Downloading and Configuring the Scanner**
+  - **Step 1: Downloading the Scanner**
     - Access the Qualys platform and in the Getting Started section, click on `Download a virtual scanner`
     - Start the wizard to configure our scanner
     - Choose `VMware ESXi, vCenter Server` as the virtualization platform and provide the name `StreetrackVA` for our scanner
     - Download the scanner appliance image to our local machine
-    - We'll take note of the provided Personalization Code for later use
+    - Take note of the provided Personalization Code for later use
 
 ![Add New Virtual Scanner](https://i.imgur.com/HVC48hW.png)<br><br>
 ![Start Wizard](https://i.imgur.com/b8xA6Vs.png)<br><br>
@@ -70,20 +70,27 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ![Save Virtual Scanner](https://i.imgur.com/iNg3raU.png)<br><br>
 ![Personalization Code](https://i.imgur.com/BXVDIKb.png)<br><br>
 
-  - **Step 3: Importing the Scanner Appliance**
-    - In VirtualBox, select 'File > Import Appliance' and navigate to the downloaded scanner image.
-    - Follow the prompts to import the scanner appliance.
-    ![Importing Appliance](Screenshot_Link_4.png)<br><br>
-    ![Appliance Settings](Screenshot_Link_5.png)<br><br>
+  - **Step 2: Importing and Configuring the Scanner Appliance**
+    - In VirtualBox, select `File` > `Import Appliance` and navigate to the downloaded scanner image
+    - Follow the prompts to import the scanner appliance
+    - Once imported, click on `Settings` > `Network` and choose:
+      - Attached to: NAT Network
+      - Name: NatNetwork
+      
+  This will ensure that the scanner and the Windows VM will be on the same network.<br><br>
+      
+![Importing Appliance](https://i.imgur.com/I5IUsmB.png)<br><br>
+![Importing Appliance1](https://i.imgur.com/VRYOIhj.png)<br><br>
+![Appliance Settings](https://i.imgur.com/VjhFhFZ.png)<br><br>
+![Appliance Settings1](https://i.imgur.com/TbXOzSZ.png)<br><br>
 
-  - **Step 4: Configuring Network Settings**
-    - Once imported, adjust the network settings of the scanner to ensure it is connected to the same NAT Network as the Windows VM.
-    ![Scanner Network Settings](Screenshot_Link_6.png)<br><br>
-
-  - **Step 5: Personalizing the Scanner**
+  - **Step 3: Personalizing the Scanner**
     - Start the scanner VM and use the personalization code provided by Qualys to activate and configure the scanner.
-    ![Scanner Console](Screenshot_Link_7.png)<br><br>
-    ![Personalization Progress](Screenshot_Link_8.png)<br><br>
+    - We'll be provided the IP address of our scanner once the personalization process is complete.
+
+![Scanner Console1](https://i.imgur.com/DQBoKfE.png)<br><br>
+![Personalization Progress](https://i.imgur.com/WYnAHVw.png)<br><br>
+![Scanner Complete](https://i.imgur.com/sZx6T6X.png)<br><br>
 
   - **Step 6: Finalizing Scanner Setup**
     - Once the personalization is complete, verify that the scanner appears in your Qualys account with the correct LAN IP.
