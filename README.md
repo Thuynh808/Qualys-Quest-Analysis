@@ -111,29 +111,21 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 
 </details>
 
-
 <details>
-<summary><h2><b>Section 3: Configuring Authenticated Scan</b></h2></summary>
-  In this section, we'll go over setting up our Windows VM for an authenticated scan. This is crucial to our vulnerability assessment. 
-  
-  <!-- Include any relevant commands or screenshots -->
-</details>
+<summary><h2><b>Section 3: Configuring Asset for Authenticated Scan</b></h2></summary>
+  Setting up for an authenticated scan ensures a more thorough assessment by allowing the scanner to log into the system. This allows for deeper vulnerability detection. Lets go over the steps to configure our asset, Windows VM, for an authenticated scan.<br><br>
 
+  - **Step 1: Adding VM's IP Range to Qualys Asset Groups**
+    - Navigate to the `Assets` tab on the Qualys platform
+    - Click `Add IPs for Scanning`
+    - Click on `New` > `IP Tracked Addresses`
+    - Enter the IP range of: `10.2.22.2-10.2.22.20`
+    - Save the configuration to ensure these IPs are included in scans
 
-
-
-<details>
-<summary><h2><b>Section 3: Configuring Authenticated Scan</b></h2></summary>
-  Setting up for an authenticated scan ensures a more thorough assessment by allowing the scanner to log into the system. This allows for deeper vulnerability detection. Here's how to prepare the Windows VM for such a scan:
-
-  - **Step 1: Add VM IP to Qualys Asset Groups**
-    - Navigate to the `Assets` tab on the Qualys platform.
-    - Click `Add IPs for Scanning` under the `Assets` management section.
-    - Enter the IP range or specific IP of your VM.
-    - Save the configuration to ensure these IPs are included in scans.
-
-![Assets Tab](https://i.imgur.com/your-image-link.png)
-![Add IPs for Scanning](https://i.imgur.com/your-image-link.png)
+![Assets Tab](https://i.imgur.com/your-image-link.png)<br><br>
+![Add IPs for Scanning1](https://i.imgur.com/your-image-link.png)<br><br>
+![Add IPs for Scanning2](https://i.imgur.com/your-image-link.png)<br><br>
+![Add IPs for Scanning3](https://i.imgur.com/your-image-link.png)<br><br>
 
   - **Step 2: Configuring Windows Firewall & Services**
     - On your Windows VM, open the `Windows Defender Firewall` settings.
