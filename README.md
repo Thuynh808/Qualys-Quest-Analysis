@@ -92,15 +92,19 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ![Personalization Progress](https://i.imgur.com/WYnAHVw.png)<br><br>
 ![Scanner Complete](https://i.imgur.com/sZx6T6X.png)<br><br>
 
-  - **Step 6: Finalizing Scanner Setup**
-    - Once the personalization is complete, verify that the scanner appears in your Qualys account with the correct LAN IP.
-    - Perform a connectivity test from the Windows VM to confirm the scanner is reachable.
-    ![Activation Verification](Screenshot_Link_9.png)<br><br>
-    ![Appliances Tab](Screenshot_Link_10.png)<br><br>
-    ![Ping Test](Screenshot_Link_11.png)
-<br><br>
+  - **Step 4: Finalizing Scanner Setup**
+    - Once the personalization is complete, verify that the scanner appears in our Qualys account with the correct LAN IP: `10.2.22.6`
+    - We'll also perform a connectivity test from the Windows VM to confirm the scanner is reachable.<br><br>
+      ```cmd
+      ipconfig
+      ping 10.2.22.6
+      ```
+            
+![Activation Verification](https://i.imgur.com/NGzwDfe.png)<br><br>
+![Appliances Tab](https://i.imgur.com/i6KX2gx.png)<br><br>
+![Ping Test](https://i.imgur.com/ssnmMud.png)<br><br>
 
-With these steps, the Qualys Virtual Scanner is now ready to scan our Windows VM for vulnerabilities. The next section will guide us through conducting our first scan.
+Awesome! The Qualys Virtual Scanner is now up and running! In the next section, we'll configure our assets for an authentication scan. 
 
 </details>
 
