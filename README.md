@@ -268,46 +268,64 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 
 <details>
 <summary><h2><b>Section 5: Analyzing and Prioritizing Results</b></h2></summary>
-  This phase involves a detailed review of the vulnerabilities identified during the scan. The goal here is to prioritize these findings based on the risk they pose to our environment. Prioritization ensures that we address the most significant threats first, aligning our remediation efforts with the potential impact. Let's break down the results and understand how to navigate through them.
+  This phase begins with understanding and reviewing the scan's findings, with the aim to prioritize vulnerabilities by their threat level. To enhance our understanding, we'll examine CVEs associated with a critical vulnerability, consulting the MITRE CVE database and the National Vulnerability Database for detailed information. This approach ensures our remediation efforts are directed where they're most needed.
 
   <details>
   <summary><h3>Understanding the Scan Summary</h3></summary>
     
-  In the realm of vulnerability management, the severity of the vulnerabilities dictates the urgency and priority with which they must be addressed. Our scan results have highlighted that:
+  In the realm of vulnerability management, the severity of the vulnerabilities dictates the urgency and priority with which they must be addressed. 
 
   **Critical and High Vulnerabilities:**
-    - Severity 5 (Critical) and Severity 4 (High) vulnerabilities are the most prominent in the scan results.
-    - These categories represent the most severe and pressing security issues that need immediate attention due to the high risk they pose.
-    - We will focus on remedying Severity 5 and 4 vulnerabilities as they are akin to critical and high threats to our network's security.
-    - Swift action on these vulnerabilities is essential to mitigate the risk of potential breaches or security incidents.
+  - Severity 5 (Critical) and Severity 4 (High) vulnerabilities are the most prominent in the scan results.
+  - These categories represent the most severe and pressing security issues that need immediate attention due to the high risk they pose.
+  - We will focus on remedying Severity 5 and 4 vulnerabilities as they are akin to critical and high threats to our network's security.
+  - Swift action on these vulnerabilities is essential to mitigate the risk of potential breaches or security incidents.
 
   **Vulnerability Breakdown:**
-    - Total Reported Vulnerabilities: 442
-    - Severity 5 Vulnerabilities: 42
-    - Severity 4 Vulnerabilities: 148
-    - Severity 3 Vulnerabilities: 58 confirmed, 3 potential
-    - Severity 2 Vulnerabilities: 16 confirmed, 2 potential
-    - Severity 1 Vulnerabilities: None reported
-    - Information Gathered: 173
-      - It's noteworthy that out of the 442 vulnerabilities, 173 are categorized as 'Information Gathered'. These entries are not actual vulnerabilities but rather informational items that may include best practices, configuration details, or other non-critical findings.
-    - Security Risk Average:
-      - The average security risk score of 5.0, a critical-risk posture, underscores the necessity for a thorough review and rapid response plan.
+  - Total Reported Vulnerabilities: 442
+  - Severity 5 Vulnerabilities: 42
+  - Severity 4 Vulnerabilities: 148
+  - Severity 3 Vulnerabilities: 58 confirmed, 3 potential
+  - Severity 2 Vulnerabilities: 16 confirmed, 2 potential
+  - Severity 1 Vulnerabilities: None reported
+  - Information Gathered: 173
+    - It's noteworthy that out of the 442 vulnerabilities, 173 are categorized as 'Information Gathered'. These entries are not actual vulnerabilities but rather informational items that may include best practices, configuration details, or other non-critical findings.
+  - Security Risk Average:
+    - The average security risk score of 5.0, a critical-risk posture, underscores the necessity for a thorough review and rapid response plan.
     
-  By concentrating on the vulnerabilities with the highest severity first and undrestand the difference between true vulnerabilities and informational findings, we can efficiently allocate our resources towards enhancing our security posture and reducing the risk landscape. 
+  By concentrating on the vulnerabilities with the highest severity first as well as understanding the difference between true vulnerabilities and informational findings, we can efficiently allocate our resources towards enhancing our security posture and reducing the risk landscape. 
 
-  ***For the remainder of this project, we will only focus on critical and high severity vulnerabilities***
+  ***For the remainder of this project, we will only focus on critical and high severity vulnerabilities***<br><br>
 
 ![Scan Summary](https://i.imgur.com/CxloV6f.png)<br><br>
 
   </details>
 
   <details>
-  <summary><h3>Reviewing Vulnerabilities by Severity</h3></summary>
+  <summary><h3>Reviewing Vulnerabilities by Category</h3></summary>
   
-  - Focus on the vulnerabilities categorized by severity level, giving immediate attention to the most severe (level 5).
-  - Assess which categories, such as 'Local', 'Security Policy', or 'Windows', have the highest number of vulnerabilities.
+  Categorizing vulnerabilities can significantly enhance the effectiveness of targeted remediation, risk assessment, and trend analysis. Let's explore how categorization aids in these aspects of vulnerability management:
 
-![Vulnerabilities by Severity](link-to-screenshot-2)<br><br>
+  - **Targeted Remediation:**
+    - Categories allow us to focus on areas that require specialized attention or expertise. For example, vulnerabilities within the 'Local' category could indicate issues with installed applications, which may require updates or patches.
+
+  - **Risk Assessment:**
+    - By understanding the categories, we can prioritize risks based on severity and the nature of the threat. A high number of 'Windows' category vulnerabilities often suggests the need for critical security updates.
+
+  - **Trend Analysis:**
+    - Categorization helps in spotting trends such as recurrent types of vulnerabilities. This can inform our security strategy and help prevent similar vulnerabilities in the future.
+
+  In our specific case:
+
+  - **Local Category:**
+    - With 217 confirmed vulnerabilities under 'Local', this could point to the outdated applications we installed on the system. Firefox being a browser could likely have many variety of web protocols, plugins, and extensions, all of which can act as potential attack surfaces. 
+
+  - **Windows Category:**
+    - The 42 items in the 'Windows' category likely represent missing security updates. These are crucial as they often patch known vulnerabilities that could be exploited by attackers. We need to ensure that all systems are up-to-date with the latest security patches to maintain a secure environment. For this project, no updates were performed before the scan so these 42 could be due to the Windows security updates.
+
+  In conclusion, categorizing vulnerabilities not only streamlines the remediation process but also provides actionable intelligence on security posture and policy development. For our situation, addressing the 'Local' and 'Windows' categories should be prioritized to mitigate the risk of exploitation from outdated applications and unpatched systems.
+
+![Vulnerabilities by Category](https://i.imgur.com/ZhwBwZA.png)<br><br>
 
   </details>
 
