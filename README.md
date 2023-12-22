@@ -1,6 +1,6 @@
 # Qualys Quest Analysis
 
-![Qualys Quest Analysis Banner](BannerImageLink.png)
+![Qualys Quest Analysis Banner](https://i.imgur.com/GBIvqJF.gif)
 
 ## Overview
 
@@ -20,42 +20,84 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 
 <details>
 <summary><h2><b>Section 1: Initial Setup</b></h2></summary>
-  To begin, we start by preparing our virtual environment for the vulnerability assessment. We'll establish a network, set up a Windows virtual machine, and install outdated versions of software known for their vulnerabilities.
+  To begin, we start by preparing our virtual environment for the vulnerability assessment. We'll establish a network, set up a Windows virtual machine, and install outdated versions of software known for their vulnerabilities.<br><br>
+  
+  - **Step 1: Creating a NAT Network**
+    - Open VirtualBox and go to `File > Tools > Host Network Manager`
+    - Click on the `NAT Networks` tab and Create with the following details:
+      - Name: NatNetwork
+      - Ipv4: 10.2.22.0/24
+      - DHCP: Enabled
 
-### Creating a NAT Network
-1. Open the **Oracle VM VirtualBox Manager**.
-2. Go to `File > Host Network Manager`.
-3. Create a new NAT Network, ensuring DHCP is enabled for automatic IP address assignment.
+![VirtualBox Manager](https://i.imgur.com/QZRWNRR.png)<br><br>
+![Creating NAT Network](https://i.imgur.com/zt1VLMW.png)
+<br><br>
 
-### Installing Windows
-1. Create a new virtual machine within VirtualBox, selecting your preferred version of Windows.
-2. Under the VM settings, go to the `Network` section and attach the VM to your created NAT Network.
+  - **Step 2: Assign Windows VM to NatNetwork**
+    - Create a Windows virtual machine in VirtualBox and configure our network settings to use our created Nat Network: `NATNetwork`
 
-### Installing Outdated Applications
-1. Use a search engine to find and download old versions of Firefox and WinRAR.
-2. From a trusted archive site, download Mozilla Firefox version 2.0.0.11 and WinRAR 3.62.
-3. Install both applications on the Windows VM, which will later be scanned for vulnerabilities.
+![VM Network Settings](https://i.imgur.com/74elGnG.png)
+<br><br>
 
-Remember to execute these steps in a controlled environment, as outdated applications can pose security risks.
+  - **Step 3: Installing Outdated Applications**
+    - Open a browser and Search for `Old Version`
+    - Click on the `OldVersion.com` link and search for Mozilla Firefox and Winrar
+    - Download and Install both applications
+   
+![Google Search for Old Version](https://i.imgur.com/fVKK6lf.png)<br><br>
+![Downloading Firefox](https://i.imgur.com/bU6ZuCT.png)<br><br>
+![Downloading Firefox1](https://i.imgur.com/O0eNVUx.png)<br><br>
+![Downloading WinRAR](https://i.imgur.com/6qAGRWv.png)<br><br>
+![Installing WinRAR](https://i.imgur.com/9bW08q4.png)<br><br>
+![Installing Firefox](https://i.imgur.com/FxHE8EV.png)
+<br><br>
 
-![VirtualBox Manager](link-to-screenshot)
-![Creating NAT Network](link-to-screenshot)
-![VM Network Settings](link-to-screenshot)
-![Google Search for Old Versions](link-to-screenshot)
-![Downloading Firefox](link-to-screenshot)
-![Downloading Firefox1](link-to-screenshot)
-![Downloading WinRAR](link-to-screenshot)
-![Installing WinRAR](link-to-screenshot)
-![Installing Firefox](link-to-screenshot)
+  Great! We've now created our Windows VM with outdated versions of Firefox and WinRAR installed. This machine will be used to find vulnerabilities for us to analyze and remediate. Next, we will download and install our Virtual Scanner from Qualys.
 
 </details>
 
 <details>
-<summary><h2><b>Section 2: Virtual Scanner Setup</b></h2></summary>
-  Steps for downloading and configuring the Qualys virtual scanner appliance within VirtualBox.
+<summary><h2><b>Section 2: Setting Up the Virtual Scanner</b></h2></summary>
+  This section involves downloading the Qualys Virtual Scanner and configuring it to work with our virtual environment assuming we've already subscribed for the Community Edition of Qualys.<br><br>
   
-  <!-- Include any relevant commands or screenshots -->
+  - **Step 1: Downloading the Scanner**
+    - Access the Qualys platform and navigate to `Scans` > `Appliances` and click on `Download a virtual scanner`
+  
+  ![Qualys Platform Download](Screenshot_Link_1.png)<br><br>
+
+  - **Step 2: Configuring the Scanner**
+    - Choose your virtualization platform and provide a name for your scanner.
+    - Download the scanner appliance image to your local machine.
+    ![Add New Virtual Scanner](Screenshot_Link_2.png)<br><br>
+    ![Save Virtual Scanner](Screenshot_Link_3.png)<br><br>
+
+  - **Step 3: Importing the Scanner Appliance**
+    - In VirtualBox, select 'File > Import Appliance' and navigate to the downloaded scanner image.
+    - Follow the prompts to import the scanner appliance.
+    ![Importing Appliance](Screenshot_Link_4.png)<br><br>
+    ![Appliance Settings](Screenshot_Link_5.png)<br><br>
+
+  - **Step 4: Configuring Network Settings**
+    - Once imported, adjust the network settings of the scanner to ensure it is connected to the same NAT Network as the Windows VM.
+    ![Scanner Network Settings](Screenshot_Link_6.png)<br><br>
+
+  - **Step 5: Personalizing the Scanner**
+    - Start the scanner VM and use the personalization code provided by Qualys to activate and configure the scanner.
+    ![Scanner Console](Screenshot_Link_7.png)<br><br>
+    ![Personalization Progress](Screenshot_Link_8.png)<br><br>
+
+  - **Step 6: Finalizing Scanner Setup**
+    - Once the personalization is complete, verify that the scanner appears in your Qualys account with the correct LAN IP.
+    - Perform a connectivity test from the Windows VM to confirm the scanner is reachable.
+    ![Activation Verification](Screenshot_Link_9.png)<br><br>
+    ![Appliances Tab](Screenshot_Link_10.png)<br><br>
+    ![Ping Test](Screenshot_Link_11.png)
+<br><br>
+
+With these steps, the Qualys Virtual Scanner is now ready to scan our Windows VM for vulnerabilities. The next section will guide us through conducting our first scan.
+
 </details>
+
 
 <details>
 <summary><h2><b>Section 3: Asset Configuration</b></h2></summary>
