@@ -185,8 +185,6 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 ![Services3](https://i.imgur.com/YMDHjIz.png)<br><br>
 ![Services4](https://i.imgur.com/zVDXJQI.png)<br><br>
 
-  
-  
   </details>
 
   <details>
@@ -197,13 +195,12 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
   - Fill in the following details:
     - Value Name: `LocalAccountTokenFilterPolicy`
     - Value Data: `1`
+    - This will ensure that the scanning tool has the necessary permissions to check for vulnerabilities on the computer by adjusting the security setting in the computer's registry.
  
 ![Registry Editor](https://i.imgur.com/gWuZE4g.png)<br><br>
 ![Registry Editor1](https://i.imgur.com/W140kFX.png)<br><br>
 ![Registry Editor2](https://i.imgur.com/ZBHXccp.png)<br><br>
 
-   This will ensure that the scanning tool has the necessary permissions to check for vulnerabilities on the computer by adjusting the security setting in the computer's registry.
-   
   </details>
 
   <details>
@@ -216,13 +213,12 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
     - Username: `Streetrack`
     - Password: `*********`
   - In the `IPs` section, input the IP address of the Windows VM: `10.2.22.5`
+  - With these credentials, Qualys will be able to perform a more thorough authenticated scan on our VM.
 
 ![Cred1](https://i.imgur.com/0TpwIyi.png)<br><br>
 ![Cred2](https://i.imgur.com/9Fyhwfw.png)<br><br>
 ![Cred3](https://i.imgur.com/s9IqGz8.png)<br><br>
 ![Cred4](https://i.imgur.com/sIFP9pB.png)<br><br>
-
-  With these credentials, Qualys will be able to perform a more thorough authenticated scan on our VM.
 
   </details>
 
@@ -241,9 +237,9 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 ![Scan TCP Ports](https://i.imgur.com/nnIVNhy.png)<br><br>
 ![Authentication](https://i.imgur.com/UO8B8sY.png)<br><br>
 
-  Let's GO! After configuring these options, we'll save the profile and now, we can use this option profile to perform authenticated scans on our Windows VM, allowing for a more comprehensive vulnerability assessment.
-
   </details>
+  
+  Let's GO! After configuring these options, we'll save the profile and now, we can use this option profile to perform authenticated scans on our Windows VM, allowing for a more comprehensive vulnerability assessment.
 
 </details>
 
