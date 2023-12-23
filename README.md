@@ -511,19 +511,60 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
 
 </details>
 
-
 <details>
 <summary><h2><b>Section 9: Pivot Table Creation</b></h2></summary>
-  Developing pivot tables in Google Sheets for a clear representation of vulnerabilities, aiding in remediation decisions.
-  
-  <!-- Include any relevant commands or screenshots -->
+
+- In the realm of vulnerability management, pivot tables serve as a potent analytical tool, streamlining the organization and interpretation of extensive vulnerability data. They enhance trend reporting by enabling security teams to visualize changes over time, identify remediation progress, and prioritize threats based on severity. 
+
+- Pivot tables also facilitate efficient communication and task delegation across different departments, ensuring that everyone involved in the remediation process is aligned and informed about the vulnerabilities.
+
+- In this section, we'll go over downloading the results from the three comprehensive security scans and creating pivot tables in Google Sheets. These pivot tables will be used to go along with our trend report in the next section.
+
+  - **Step 1: Download Reports**
+    - Navigate to the Qualys platform
+    - Under the `Scans` tab, choose each authenticated scan and click download
+    - For download format, choose `Comma-separated value (CSV)`
+   
+![Download CSV](https://i.imgur.com/fYE5oHW.png)<br><br>
+![Download CSV1](https://i.imgur.com/npXUJwH.png)<br><br>
+
+
+
+
+
+
 </details>
+
+
+
+
+
+
+
+
+
 
 <details>
 <summary><h2><b>Section 10: Trend Report Generation</b></h2></summary>
   Using the data from pivot tables to compile a trend report, illustrating the efficacy of the vulnerability management process throughout the project.
   
-  <!-- Include any relevant commands or screenshots -->
+
+<details>
+<summary><h2><b>Section 9: Pivot Table Creation for Trend Reporting</b></h2></summary>
+
+- Pivot tables are invaluable in vulnerability management for organizing and interpreting large datasets. They not only facilitate trend analysis but also assist in visualizing the impact of remediation efforts over time, enabling security teams to prioritize and address the most critical threats effectively.
+
+- Trend reports created from pivot tables offer a dynamic view of vulnerability data, showcasing the progression of security posture improvements as a result of remediation activities. They help to highlight patterns, predict future security challenges, and inform strategic decision-making.
+
+- In this section, we'll cover the steps to export scan data and use it to create pivot tables in Google Sheets. We will then integrate these pivot tables into a trend report that visualizes the reduction in vulnerabilities after each scan, reflecting the success of our remediation efforts. This will include a comparison of vulnerability counts, severities, and types before and after remediation, providing a clear, actionable insight into the effectiveness of our vulnerability management process.
+
+</details>
+
+
+
+
+
+
 </details>
 
 ## Conclusion
