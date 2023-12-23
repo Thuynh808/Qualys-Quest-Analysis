@@ -430,12 +430,12 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 
 These changes underscore the effectiveness of the remediation actions taken, such as uninstalling outdated applications like Firefox, and demonstrate the value of conducting follow-up scans as part of a comprehensive vulnerability management process.
   
-![Second Scan Summary](https://i.imgur.com/ncAlmGv.png)
+![Second Scan Summary](https://i.imgur.com/ncAlmGv.png)<br><br>
 
 **Step 4: Reflect on Remaining Vulnerabilities:**
   - The detailed results of the second scan highlighted the remaining issues that still require attention.
   
-![Second Scan Detailed Results](https://i.imgur.com/30HP9HT.png)
+![Second Scan Detailed Results](https://i.imgur.com/30HP9HT.png)<br><br>
 
   These steps confirmed that uninstalling the outdated application was an effective measure in reducing our exposure to potential threats. The second scan's outcomes dictate our next actions in the continuous process of vulnerability management.
 
@@ -443,9 +443,50 @@ These changes underscore the effectiveness of the remediation actions taken, suc
 
 <details>
 <summary><h2><b>Section 7: Further Analysis and Remediation</b></h2></summary>
-  Updating Windows, applying Microsoft service updates, and conducting further vulnerability remediation.
+  Continuing with the vulnerability management cycle, we'll analyze the remaining vulnerabilities from our second scan. We can identify critical Windows security updates along with high-severity Microsoft application vulnerabilities. Another round of remediation will commence to further harden our system.
+
+![Second Scan Results](https://i.imgur.com/faWuNaA.png)<br><br>
+
+**Step 1: Update Windows**
+  From the scan results we can see the remaining critical alerts are related to Windows Security Update. We will now update the system.
+    - Navigate to `Windows Update` and click `Download`
+    - After updates finish downloading and installing, followed by restarts. we can confirm that our system is up to date.
+
+![Windows Update](https://i.imgur.com/xA4ywkY.png)<br><br>
+![Windows Update1](https://i.imgur.com/LxpL9CM.png)<br><br>
+
+**Step 2: Investigate Microsoft High Vulnerabilities**
+  - Here we focus on 2 Remote Code Execution (RCE) vulnerabilities in the 3D Viewer application and Windows Codecs Library. Consulting the associated CVE links revealed that updates and patches could be obtained through the Microsoft Store.
+
+![Microsoft Vulnerabilities](https://i.imgur.com/Zmq3iXy.png)<br><br>
+![Microsoft Vulnerabilities1](https://i.imgur.com/X6l3ATT.png)<br><br>
+![Microsoft Vulnerabilities2](https://i.imgur.com/FdVPQVJ.png)<br><br>
+![Microsoft Vulnerabilities3](https://i.imgur.com/L4rNUlJ.png)<br><br>
+
+**Step 3: Remediate Microsoft High Vulnerabilities**
+  - To remediate these vulnerabilities, we'll update the following:
+    - Navigate to the Microsoft Store within our Windows environment
+    - Identify and apply the necessary updates for the 3D Viewer and HEIF Image Extensions as per CVE instructions
+
+![Microsoft Update](https://i.imgur.com/dqEzoU1.png)<br><br>
+![Microsoft Update1](https://i.imgur.com/knZNGsS.png)<br><br>
+![Microsoft Update2](https://i.imgur.com/bQz3IA3.png)<br><br>
+![Microsoft Update3](https://i.imgur.com/IJLab1K.png)<br><br>
   
-  <!-- Include any relevant commands or screenshots -->
+These actions are crucial to maintaining a secure environment and will be verified in our third scan.
+
+</details>
+
+
+
+
+
+
+
+
+
+
+  
 </details>
 
 <details>
