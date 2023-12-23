@@ -392,14 +392,14 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 <summary><h2><b>Section 6: Remediation and Second Scan</b></h2></summary>
   In the landscape of risk remediation, the chosen strategy often depends on the necessity and function of the associated applications. If an application is not essential to daily operations and it poses significant security vulnerabilities, opting for risk avoidance by uninstalling the application may be the most secure approach. This method effectively removes the threat from the environment, enhancing overall security without the need for ongoing management that comes with risk reduction strategies. By choosing risk avoidance in such scenarios, we can maintain a stronger security posture and eliminate unnecessary vulnerabilities from our system.<br><br>
   
-**Step 1: Remediation: Uninstalling Outdated Applications:**
+- **Step 1: Remediation: Uninstalling Outdated Applications:**
   - We identified Mozilla Firefox and WinRAR as outdated versions with multiple vulnerabilities. To mitigate the risk, we choose to uninstall the applications from our system.
   
 ![Uninstalling Firefox](https://i.imgur.com/ofDtPm3.png)<br><br>
 
   With the outdated applications removed, we then prepare for a second vulnerability scan to verify the effectiveness of our remediation actions.
 
-**Step 2: Performing Second Scan:**
+- **Step 2: Performing Second Scan:**
   - Set up the scan with the title `Win10 Authenticated Scan 2`
   - Configure the same basic Windows 10 scan option profile as well as scanner appliance and target IP
   - Launch the Scan and when finished, click `View Results`
@@ -408,7 +408,7 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
   
 ![Second Scan Launch](https://i.imgur.com/na35ELY.png)<br><br>
 
-**Step 3: Review Second Scan Results:**
+- **Step 3: Review Second Scan Results:**
   
   The second scan results indicate a significant reduction in the number of vulnerabilities compared to the first scan. Here are some bullet points that outline the key changes:
 
@@ -432,7 +432,7 @@ These changes underscore the effectiveness of the remediation actions taken, suc
   
 ![Second Scan Summary](https://i.imgur.com/ncAlmGv.png)<br><br>
 
-**Step 4: Reflect on Remaining Vulnerabilities:**
+- **Step 4: Reflect on Remaining Vulnerabilities:**
   - The detailed results of the second scan highlighted the remaining issues that still require attention.
   
 ![Second Scan Detailed Results](https://i.imgur.com/30HP9HT.png)<br><br>
@@ -443,30 +443,31 @@ These changes underscore the effectiveness of the remediation actions taken, suc
 
 <details>
 <summary><h2><b>Section 7: Further Analysis and Remediation</b></h2></summary>
-  Continuing with the vulnerability management cycle, we'll analyze the remaining vulnerabilities from our second scan. We can identify critical Windows security updates along with high-severity Microsoft application vulnerabilities. Another round of remediation will commence to further harden our system.
+  Continuing with the vulnerability management cycle, we'll analyze the remaining vulnerabilities from our second scan. We can identify critical Windows security updates along with high-severity Microsoft application vulnerabilities. Another round of remediation will commence to further harden our system.<br><br>
 
 ![Second Scan Results](https://i.imgur.com/faWuNaA.png)<br><br>
 
-**Step 1: Update Windows**
-  From the scan results we can see the remaining critical alerts are related to Windows Security Update. We will now update the system.
+- **Step 1: Update Windows**
+  - From the scan results we can see the remaining critical alerts are related to Windows Security Update. We will now update the system.
     - Navigate to `Windows Update` and click `Download`
     - After updates finish downloading and installing, followed by restarts. we can confirm that our system is up to date.
 
 ![Windows Update](https://i.imgur.com/xA4ywkY.png)<br><br>
 ![Windows Update1](https://i.imgur.com/LxpL9CM.png)<br><br>
 
-**Step 2: Investigate Microsoft High Vulnerabilities**
-  - Here we focus on 2 Remote Code Execution (RCE) vulnerabilities in the 3D Viewer application and Windows Codecs Library. Consulting the associated CVE links revealed that updates and patches could be obtained through the Microsoft Store.
+- **Step 2: Investigate Microsoft High Vulnerabilities**
+  - Here we focus on 2 Remote Code Execution (RCE) vulnerabilities in the 3D Viewer application and Windows Codecs Library.
+  - Consulting the associated CVE links revealed that updates and patches could be obtained through the Microsoft Store.
 
 ![Microsoft Vulnerabilities](https://i.imgur.com/Zmq3iXy.png)<br><br>
 ![Microsoft Vulnerabilities1](https://i.imgur.com/X6l3ATT.png)<br><br>
 ![Microsoft Vulnerabilities2](https://i.imgur.com/FdVPQVJ.png)<br><br>
 ![Microsoft Vulnerabilities3](https://i.imgur.com/L4rNUlJ.png)<br><br>
 
-**Step 3: Remediate Microsoft High Vulnerabilities**
-  - To remediate these vulnerabilities, we'll update the following:
-    - Navigate to the Microsoft Store within our Windows environment
-    - Identify and apply the necessary updates for the 3D Viewer and HEIF Image Extensions as per CVE instructions
+- **Step 3: Remediate Microsoft High Vulnerabilities**
+    - To remediate these vulnerabilities, we'll do the following:
+      - Navigate to the Microsoft Store within our Windows environment
+      - Identify and apply the necessary updates for the 3D Viewer and HEIF Image Extensions as per CVE instructions
 
 ![Microsoft Update](https://i.imgur.com/dqEzoU1.png)<br><br>
 ![Microsoft Update1](https://i.imgur.com/knZNGsS.png)<br><br>
