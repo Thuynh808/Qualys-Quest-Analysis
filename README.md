@@ -507,7 +507,8 @@ The objective is to evaluate the current security posture of the system followin
 ![Scan 3-3](https://i.imgur.com/2isaU26.png)<br><br>
 ![Scan 3-4](https://i.imgur.com/Jsy5udq.png)<br><br>
 
-<p>This trend of diminishing vulnerabilities affirms our proactive approach and the measures we implement to secure our environment. By focusing on the Vulnerability Management Cycle, we can continue to resolve vulnerabilities aiming to reduce the attack surface further and strengthen our security defenses.</p>
+This trend of diminishing vulnerabilities affirms our proactive approach and the measures we implement to secure our environment. By focusing on the Vulnerability Management Cycle, we can continue to resolve vulnerabilities aiming to reduce the attack surface further and strengthen our security defenses.
+
 </details>
 
 
