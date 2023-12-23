@@ -58,10 +58,10 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ![Downloading WinRAR](https://i.imgur.com/6qAGRWv.png)<br><br>
 ![Installing WinRAR & Firefox](https://i.imgur.com/DEaNp0z.png)<br><br>
 
-  </details>
-
   Great! We've now created our Windows VM with outdated versions of Firefox and WinRAR installed. This machine will be used to find vulnerabilities for us to analyze and remediate. Next, we will download and install our Virtual Scanner from Qualys.
 
+  </details>
+  
 </details>
 
 <details>
@@ -133,9 +133,9 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 ![Appliances Tab](https://i.imgur.com/i6KX2gx.png)<br><br>
 ![Ping Test](https://i.imgur.com/ssnmMud.png)<br><br>
 
+  Awesome! The Qualys Virtual Scanner is now up and running! In the next section, we'll configure our asset for an authenticated scan. 
+  
   </details>
-
-Awesome! The Qualys Virtual Scanner is now up and running! In the next section, we'll configure our asset for an authenticated scan. 
 
 </details>
 
@@ -237,14 +237,14 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
 ![Scan TCP Ports](https://i.imgur.com/nnIVNhy.png)<br><br>
 ![Authentication](https://i.imgur.com/UO8B8sY.png)<br><br>
 
-  </details>
-  
   Let's GO! After configuring these options, we'll save the profile and now, we can use this option profile to perform authenticated scans on our Windows VM, allowing for a more comprehensive vulnerability assessment.
+  
+  </details>
 
 </details>
 
 <details>
-<summary><h2><b>Section 4: Our First Scan</b></h2></summary>
+<summary><h2><b>Section 4: Initial Scan</b></h2></summary>
   
   Alright! Now we're ready to run our first authenicated scan! This will provide us with a view of gaps in our security and help us in securing them.
 
@@ -332,44 +332,59 @@ Awesome! The Qualys Virtual Scanner is now up and running! In the next section, 
   <details>
   <summary><h3>Examining Detailed Results</h3></summary>
   
-  - Dive into the detailed results for a granular view of each vulnerability.
-  - Understand the nature of each vulnerability and its potential impact on your system.
+  The "Detailed Results" section offers a list of individual vulnerabilities. Numerous critical severity level 5 vulnerabilties cover the screen:
+  
+  - **Critical Windows Security Updates:**
+    - These entries suggest missing patches for known Windows vulnerabilities, which are crucial to address promptly to maintain system security.
+    
+  - **Firefox Vulnerabilities:**
+    - Outdated versions of Firefox have multiple security gaps, emphasizing the need for regular updates to web browsers, which are common targets for exploitation due to their extensive internet interaction.
 
-![Detailed Results](link-to-screenshot-3)<br><br>
+  In essence, this portion underscores the urgency of applying security patches to both operating systems and applications to mitigate the risk of potential cyber attacks.
+
+![Detailed Results](https://i.imgur.com/Y5LtkFt.png)<br><br>
 
   </details>
 
   <details>
   <summary><h3>Investigating Individual Vulnerabilities</h3></summary>
+
+  Here, we'll select a critical vulnerability to investigate further. Lets take a look at one thats related to Mozilla Firefox, a critical remote code execution issue. A remote code execution vulnerability allows an attacker to run code on a victim's system.
+
+  - **CVE ID:**
+    - The associated CVE (Common Vulnerabilities and Exposures) ID is CVE-2016-9079, which serves as a unique identifier for this specific security flaw.
   
-  - Select individual vulnerabilities to explore detailed descriptions, threat levels, and impacts.
-  - Look for suggested solutions or patches provided for each issue.
+  - **Impact on Systems:**
+    - The vulnerability's impact is significant as it could allow remote attackers to execute code on the user’s system, potentially leading to data theft, unauthorized access, or other malicious activities.
 
-![Individual Vulnerability](link-to-screenshot-4)<br><br>
+  - **Solution:**
+    - The report includes links for patches, underscoring the availability of fixes that should be applied to mitigate the risk.
 
-  </details>
+  - **Exploitability:**
+    - We see mulitple entries for exploitability meaning attackers are actively exploiting this vulnerability. This increases the urgency to patch affected systems.
 
-  <details>
-  <summary><h3>Researching CVE Details</h3></summary>
+![Individual Vulnerability](https://i.imgur.com/3k6Abiq.png)<br><br>
+
+  - **Associated Malware:**
+    - Upon scrolling down, we see the presence of known malware associated with this vulnerability which confirms its criticality and active exploitation in the wild.
+
+![Individual Vulnerability1](https://i.imgur.com/LecO7GV.png)<br><br>
+
+  - **Further Investigation:**
+    - Following the CVE link leads to the MITRE CVE page, which details that the vulnerability relates to the SVG Animation feature in Firefox and affects Tor Browser users in Windows as well.
+    - The NIST National Vulnerability Database (NVD) link provides additional insights, including the CVSS score.
+    - Click on `Learn more at National Vulnerability Database (NVD)`
+
+![Individual Vulnerability2](https://i.imgur.com/daYsuvo.png)<br><br>
+
+  - **CVSS Score Explanation:**
+    - The CVSS (Common Vulnerability Scoring System) score quantifies the severity of vulnerabilities; a score of 7.5 is categorized as High, indicating a severe level of risk.
+
+![Individual Vulnerability3](https://i.imgur.com/CiVtNqP.png)<br><br>
+
+  Considering the critical severity, high CVSS score, known exploitability, and associated malware, this vulnerability is a high-priority issue that must be addressed immediately to protect systems from potential compromise.
   
-  - For vulnerabilities associated with CVE IDs, research the specific CVE details.
-  - Utilize resources like the National Vulnerability Database for in-depth information.
-
-![CVE Details](link-to-screenshot-5)<br><br>
-
   </details>
-
-  <details>
-  <summary><h3>Understanding Exploitability and Mitigation</h3></summary>
-  
-  - Evaluate the exploitability of each vulnerability and existing mitigation measures.
-  - Prioritize vulnerabilities with high exploitability and those without current mitigation.
-
-![Exploitability and Mitigation](link-to-screenshot-6)<br><br>
-
-  </details>
-
-  By carefully analyzing and prioritizing the scan results, we can develop an effective plan to mitigate risks. This process forms the foundation of proactive vulnerability management, guiding us towards a more secure infrastructure.
 
 </details>
 
