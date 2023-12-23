@@ -388,20 +388,57 @@ Qualys is a cloud-based service that provides vulnerability scanning and managem
 
 </details>
 
-
-
-
-
-
-
-
-
-
 <details>
 <summary><h2><b>Section 6: Remediation and Second Scan</b></h2></summary>
-  Describing the process of uninstalling outdated applications, remediation actions taken, and performing the second scan.
+  In the landscape of risk remediation, the chosen strategy often depends on the necessity and function of the associated applications. If an application is not essential to daily operations and it poses significant security vulnerabilities, opting for risk avoidance by uninstalling the application may be the most secure approach. This method effectively removes the threat from the environment, enhancing overall security without the need for ongoing management that comes with risk reduction strategies. By choosing risk avoidance in such scenarios, we can maintain a stronger security posture and eliminate unnecessary vulnerabilities from our system.<br><br>
   
-  <!-- Include any relevant commands or screenshots -->
+**Step 1: Remediation: Uninstalling Outdated Applications:**
+  - We identified Mozilla Firefox and WinRAR as outdated versions with multiple vulnerabilities. To mitigate the risk, we choose to uninstall the applications from our system.
+  
+![Uninstalling Firefox](https://i.imgur.com/ofDtPm3.png)<br><br>
+
+  With the outdated applications removed, we then prepare for a second vulnerability scan to verify the effectiveness of our remediation actions.
+
+**Step 2: Performing Second Scan:**
+  - Set up the scan with the title `Win10 Authenticated Scan 2`
+  - Configure the same basic Windows 10 scan option profile as well as scanner appliance and target IP
+  - Launch the Scan and when finished, click `View Results`
+  
+![Second Scan Setup](https://i.imgur.com/2iFl2jQ.png)<br><br>
+  
+![Second Scan Launch](https://i.imgur.com/na35ELY.png)<br><br>
+
+**Step 3: Review Second Scan Results:**
+  
+  The second scan results indicate a significant reduction in the number of vulnerabilities compared to the first scan. Here are some bullet points that outline the key changes:
+
+  - **Total Vulnerabilities Reduced:**
+    - The total number of vulnerabilities decreased from 427 to 226, showing a substantial improvement in security posture.
+
+  - **Critical and High-severity Vulnerabilities Decreased:**
+    - Severity 5 vulnerabilities dropped from 42 to 8.
+    - Severity 4 vulnerabilities saw a reduction from 148 to 23.
+  
+  - **'Local' Category Improvement:**
+    - The 'Local' category, which initially had 217 confirmed vulnerabilities, no longer appears among the top categories, suggesting that local issues were effectively remediated.
+
+  - **'Windows' and 'Security Policy' Categories:**
+    - There remains a significant number of 'Windows' category vulnerabilities, likely related to outstanding security updates. The 'Security Policy' category also still shows vulnerabilities, indicating a need for further policy adjustments.
+
+  - **Information Gathered:**
+    - The 'Information Gathered' category showed a decrease in entries, from 173 to 109, which may include lower-risk findings but still signifies a more secure and compliant environment.
+
+These changes underscore the effectiveness of the remediation actions taken, such as uninstalling outdated applications like Firefox, and demonstrate the value of conducting follow-up scans as part of a comprehensive vulnerability management process.
+  
+![Second Scan Summary](https://i.imgur.com/ncAlmGv.png)
+
+**Step 4: Reflect on Remaining Vulnerabilities:**
+  - The detailed results of the second scan highlighted the remaining issues that still require attention.
+  
+![Second Scan Detailed Results](https://i.imgur.com/30HP9HT.png)
+
+  These steps confirmed that uninstalling the outdated application was an effective measure in reducing our exposure to potential threats. The second scan's outcomes dictate our next actions in the continuous process of vulnerability management.
+
 </details>
 
 <details>
