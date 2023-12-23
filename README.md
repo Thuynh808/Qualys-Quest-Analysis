@@ -478,24 +478,38 @@ These actions are crucial to maintaining a secure environment and will be verifi
 
 </details>
 
-
-
-
-
-
-
-
-
-
-  
 </details>
 
 <details>
-<summary><h2><b>Section 8: Third Scan</b></h2></summary>
-  Executing the third scan post-updates to assess the impact on the system's security.
+<summary><h2><b>Section 8: Third Vulnerability Scan </b></h2></summary>
   
-  <!-- Include any relevant commands or screenshots -->
+We continue with our vulnerability management cycle by initiating the third scan.
+  
+- **Step 1: Perform Third Scan**
+  - Navigate to the Qualys platform and choose `Scans` > `New` > `Scan`
+  - Provide the scan details:
+    - Title: `Win10 Authenticated Scan 3`
+    - Option Profile: `Basic Win10 Scan`
+    - Scanner Appliance: `StreetrackVA`
+    - IPv4 Address: `10.2.22.5`
+    - Click on `Launch` once the settings are set. Once finshed click on `View Results`
+
+The objective is to evaluate the current security posture of the system following the updates and remediation actions that have been taken.
+
+![Scan 3-1](https://i.imgur.com/PYQzno2.png)<br><br>
+![Scan 3-2](https://i.imgur.com/x05m2ej.png)<br><br>
+
+- **Step 1: Reviewing the Third Scan**
+  - Upon reviewing the results of the third scan, we are observing a further reduction in vulnerabilities.
+  - There are no critical alerts, and only a few high-severity issues remain.
+  - This improvement highlights the effectiveness of our remediation approach, which includes updating services through the Microsoft Store and applying the latest security updates to Windows.
+
+![Scan 3-3](https://i.imgur.com/2isaU26.png)<br><br>
+![Scan 3-4](https://i.imgur.com/Jsy5udq.png)<br><br>
+
+<p>This trend of diminishing vulnerabilities affirms our proactive approach and the measures we implement to secure our environment. By focusing on the Vulnerability Management Cycle, we can continue to resolve vulnerabilities aiming to reduce the attack surface further and strengthen our security defenses.</p>
 </details>
+
 
 <details>
 <summary><h2><b>Section 9: Pivot Table Creation</b></h2></summary>
