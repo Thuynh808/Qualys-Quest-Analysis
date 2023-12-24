@@ -539,8 +539,32 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
 ![CSV2](https://i.imgur.com/OO8yd9a.png)<br><br>
 ![CSV3](https://i.imgur.com/qlJWyYI.png)<br><br>
 
+  - **Step 3: Create Pivot Table**
+    - Select everything and navigate to `Insert` > `Pivot Table`
+    - Choose `New Sheet` and click `Create`
 
+![CSV4](https://i.imgur.com/r4QWyfK.png)<br><br>
+![CSV5](https://i.imgur.com/dyE8Orb.png)<br><br>
 
+  - **Step 4: Edit Pivot Table**
+    - Here we can see our blank table on the left and on the right is our Pivot Table Editor
+      - Notice the four categories:
+        - Rows
+        - Columns
+        - Values
+        - Filters
+    - On the far right section, there are the different key filters we created earlier. We'll click and drag these over to the four categories to edit our pivot table:
+      - Click and drag `Title` to the `Rows` section
+      - Click and drag `Severity` to the `Columns` section and rename it to `Severity`
+      - Click and drag `Severity` to the `Filters` section
+      - In the drop down menu of the `Filters` section, choose to show severity `4` and `5`
+      - Under the `Rows` section, select `Sort by` and choose `Severity`
+    - Now let's rename this table as `Vulnerability Title`
+
+  - We should now have a table with the vulnerability title and the severity level 4 and 5.
+    
+![pivot](https://i.imgur.com/z2Npo3a.png)<br><br>
+![pivot](https://i.imgur.com/kbXXqnH.png)<br><br>
 
 
 
