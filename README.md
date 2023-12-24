@@ -547,7 +547,8 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
 ![CSV5](https://i.imgur.com/dyE8Orb.png)<br><br>
 
   - **Step 4: Edit Pivot Table**
-    - Here we can see our blank table on the left and on the right is our Pivot Table Editor
+    - Lets create a table with the vulnerability name and filter to only see severity level 4 and 5.
+    - To begin, we can see our blank table on the left and on the right is our Pivot Table Editor
       - Notice the four categories:
         - Rows
         - Columns
@@ -561,12 +562,24 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
       - Under the `Rows` section, select `Sort by` and choose `Severity`
     - Now let's rename this table as `Vulnerability Title`
 
-  - We should now have a table with the vulnerability title and the severity level 4 and 5.
+  - We should now have a table with the vulnerability title with severity levels 4 and 5.
     
 ![pivot](https://i.imgur.com/z2Npo3a.png)<br><br>
 ![pivot](https://i.imgur.com/kbXXqnH.png)<br><br>
 
+  - **Step 5: Categroy Pivot Table**
+    - Now we'll create another pivot table to show the amount of vulnerabilities by their categories.
+    - First, lets right-click on the previous table and choose `Duplicate`
+    - We can see a duplicate table has been created
+    - Rename this table `Vulnerability Category`
+    - Now remove all filters except for the last one which is `Severity` in the `Filters` section. we want to continue to show only severity levels 4 and 5
+    - Click and drag `Category` to the `Rows` section
+    - Click and drag `Resuls` to the `Values` section and summarize by COUNTA
+   
+  - Once finished we can see the number of vulnerabilities in each category with severity levels of high(4) and critical(5). This can really help us by enabling quick identification of areas with the highest security risks and prioritization for remediation efforts.
 
+![pivot](https://i.imgur.com/ec9UXIq.png)<br><br>
+![pivot](https://i.imgur.com/5J6MmCE.png)<br><br>
 
 </details>
 
