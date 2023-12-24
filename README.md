@@ -518,7 +518,7 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
 
 - Pivot tables also facilitate efficient communication and task delegation across different departments, ensuring that everyone involved in the remediation process is aligned and informed about the vulnerabilities.
 
-- In this section, we'll go over downloading the results from the three comprehensive security scans and creating pivot tables in Google Sheets. These pivot tables will be used to go along with our trend report in the next section.
+- In this section, we'll go over downloading the results from the three comprehensive security scans and creating pivot tables in Google Sheets. These pivot tables will be used to go along with our report in the next section.
 
   - **Step 1: Download Reports**
     - Navigate to the Qualys platform
@@ -603,13 +603,77 @@ Awesome! In this section, we've taken a deep dive into the creation of pivot tab
 
 <details>
 <summary><h2><b>Section 10: Trend Report Generation</b></h2></summary>
-  Using the data from pivot tables to compile a trend report, illustrating the efficacy of the vulnerability management process throughout the project.
   
+- In this section, we'll be using the data from our pivot tables to compile a report illustrating the effectiveness of the vulnerability management process throughout the project.
+
+- We'll use the following guideline to craft our report:
+  - Header:
+    - Title
+    - Reported By
+    - Date
+  - Executive Summary
+  - Background
+  - Scan Summary:
+    - Initial Scan
+    - Second Scan
+    - Third Scan
+  - Trend Analysis
+  - Key Findings
+  - Conclusion
+
+<br><br>
+
+***Our Vulnerability Management Report***
 
 
+Vulnerability Management Analysis Report
+Report Prepared By: Thong Huynh
+Date: 12/23/2023
 
+**Executive Summary**
 
+This report presents the findings and progress from a series of vulnerability scans conducted in a controlled virtual environment using Qualys. The aim was to emulate the vulnerability management cycle, starting from initial scanning to remediation and re-scanning, across three phases. We also focused on illustrating the effectiveness of this process through pivot table analysis and trend reporting.
 
+**Background**
+
+The virtual environment was intentionally configured with outdated applications to simulate real-world vulnerabilities. Our approach was to continuously scan, analyze, remediate, and then re-scan to closely follow the typical vulnerability management lifecycle. 
+
+**Scan Summary**
+
+- Initial Scan: A substantial count of vulnerabilities were uncovered, with a concentration of critical and high-severity issues mainly in the 'Windows' and 'Local' categories.
+
+![pivot](https://i.imgur.com/xXfdBfD.png)<br><br>
+![pivot](https://i.imgur.com/gTOsY7F.png)<br><br>
+
+- Second Scan (Post-Initial Remediation): Efforts resulted in a noticeable decrease in overall vulnerabilities, especially critical ones, indicating successful remediation of several high-priority issues.
+
+![pivot](https://i.imgur.com/BgaRsKa.png)<br><br>
+![pivot](https://i.imgur.com/SfVyWeM.png)<br><br>
+
+- Third Scan (Post-Secondary Remediation): Consecutive remediation further decreased vulnerabilities, with no critical vulnerabilities remaining and a few high-severity ones.
+
+![pivot](https://i.imgur.com/9sz9KPe.png)<br><br>
+![pivot](https://i.imgur.com/FBCtaUz.png)<br><br>
+
+**Trend Analysis**
+
+- The analysis, based on pivot table data, indicated a positive downward trend in the number and severity of vulnerabilities. This suggests that the remediation measures taken were effective in mitigating identified vulnerabilities.
+
+**Key Findings**
+
+- The majority of critical vulnerabilities were successfully remediated after the first round of scans.
+- Persistent vulnerabilities, primarily of high severity, require ongoing attention.
+- Updates and patches significantly reduced the 'Windows' category vulnerabilities 
+
+**Recommendations**
+
+- Continue monitoring for residual high-severity vulnerabilities and prioritize their remediation.
+- Implement a regular patch management schedule to prevent new vulnerabilities.
+- Conduct periodic vulnerability scans to maintain a robust security posture.
+
+**Conclusion**
+
+The structured approach showcased the effectiveness of a thorough and iterative vulnerability management process. The crafted pivot tables proved invaluable in tracking and reporting on the progress of our remediation efforts, underscoring the importance of such tools in a SOC analyst's repertoire.
 
 </details>
 
