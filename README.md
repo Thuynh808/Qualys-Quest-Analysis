@@ -592,9 +592,10 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
     - Rename `Results` to `Vulnerability Severity by IP`
    
   - Great! We now have a table showing our IP and the amount of vulnerabilities with severity levels 4 and 5. This can help us pinpoint critical risk areas for specific IPs.
-  - For each of the three scans, we'll construct these tables and utilize them in the subsequent section to develop a trend report that offers enhanced clarity on our findings.
 
 ![pivot](https://i.imgur.com/KWKkp25.png)<br><br>
+
+> <b>For each of the three scans, we'll construct these tables and utilize them in the subsequent section to develop a trend report that offers enhanced clarity on our findings.</b><br>
 
 Awesome! In this section, we've taken a deep dive into the creation of pivot tables, a critical step that enhances our understanding of vulnerability trends over time. Not only do these tables provide a clear visual representation of data for more insightful trend reporting, but they also offer additional benefits such as simplifying complex data sets, enabling quick identification of key risk areas, and facilitating effective communication across teams. This allows for a more targeted and efficient approach to managing and remediating vulnerabilities in our systems.
 
