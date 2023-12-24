@@ -562,12 +562,12 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
       - Under the `Rows` section, select `Sort by` and choose `Severity`
     - Now let's rename this table as `Vulnerability Title`
 
-  - We should now have a table with the vulnerability title with severity levels 4 and 5.
+  - We should now have a table of the vulnerability titles with severity levels 4 and 5.
     
 ![pivot](https://i.imgur.com/z2Npo3a.png)<br><br>
 ![pivot](https://i.imgur.com/kbXXqnH.png)<br><br>
 
-  - **Step 5: Categroy Pivot Table**
+  - **Step 5: Category Pivot Table**
     - Now we'll create another pivot table to show the amount of vulnerabilities by their categories.
     - First, lets right-click on the previous table and choose `Duplicate`
     - We can see a duplicate table has been created
@@ -580,6 +580,23 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
 
 ![pivot](https://i.imgur.com/ec9UXIq.png)<br><br>
 ![pivot](https://i.imgur.com/5J6MmCE.png)<br><br>
+
+  - **Step 6: IP Pivot Table**
+    - Lets create one more pivot table. This time we'll create one focused on the IP and the number of vulnerabilities with severity levels 4 and 5
+    - Right-click the previous table and select `Duplicate`
+    - Rename this table `IP Critical/High`
+    - Remove all filters except for the last one `Severity` in the `Filters` section
+    - Click and drag `IP` to the `Rows` section
+    - Click and drag `Severity` to the `Columns` section
+    - Click and drag `Results` to the `Values` section
+    - Rename `Results` to `Vulnerability Severity by IP`
+   
+  - Great! We now have a table showing our IP and the amount of vulnerabilities with severity levels 4 and 5. This can help us pinpoint critical risk areas for specific IPs.
+
+![pivot](https://i.imgur.com/KWKkp25.png)<br><br>
+
+Awesome! In this section we went over how to create pivot tables to help get a better visual for trend reporting as well as other benifts
+
 
 </details>
 
