@@ -528,15 +528,16 @@ This trend of diminishing vulnerabilities affirms our proactive approach and the
 ![Download CSV](https://i.imgur.com/fYE5oHW.png)<br><br>
 ![Download CSV1](https://i.imgur.com/npXUJwH.png)<br><br>
 
-  -**Step 2: Import and Initial Setup**
+  - **Step 2: Import and Initial Setup**
     - Open Google Sheets and import the downloaded scan results. 
     - Highlight the metadata section of the header and delete them. We won't be needing them for our pivot tables
-    - Select the entire first row which is our 'key' row and click on the `Create a Filter Icon`. Now we can filter using those values. 
+    - Select the entire first row which is our 'key' row and click on the `Create a Filter Icon`. Now we can filter using these values.
+    - Select everything and right-click to choose `Resize rows` > size `21` which is the default. This isn't for the pivot tables but it does give us a better view of the data.
 
-![Download CSV](https://i.imgur.com/fYE5oHW.png)<br><br>
-![Download CSV1](https://i.imgur.com/npXUJwH.png)<br><br>
-![Download CSV](https://i.imgur.com/fYE5oHW.png)<br><br>
-![Download CSV1](https://i.imgur.com/npXUJwH.png)<br><br>
+![CSV](https://i.imgur.com/o3kgMpZ.png)<br><br>
+![CSV1](https://i.imgur.com/PqZVRab.png)<br><br>
+![CSV2](https://i.imgur.com/OO8yd9a.png)<br><br>
+![CSV3](https://i.imgur.com/qlJWyYI.png)<br><br>
 
 
 
