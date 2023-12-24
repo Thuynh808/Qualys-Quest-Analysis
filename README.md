@@ -679,7 +679,8 @@ The structured approach showcased the effectiveness of a thorough and iterative 
 
 </details>
 
-## Reflections
+<details>
+<summary><h2><b>Reflections</b></h2></summary>
 
 LETS GO!!! In this project, We navigated the full spectrum of the vulnerability management cycle in a simulated corporate setting. The hands-on experience underscored the balance between theoretical knowledge and its practical application.
 
@@ -689,7 +690,7 @@ Compiling the trend report brought to light the improvement in the security post
 
 Reflecting on this journey, I've gained a deeper appreciation for the relentless nature of cybersecurity and the necessity of continuous adaptation and learning. This project has not only honed my technical prowess but also reinforced my dedication to the ongoing endeavor of cyber defense.
 
-
+</details>
 
 
 
