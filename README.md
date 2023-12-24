@@ -602,7 +602,7 @@ Awesome! In this section, we've taken a deep dive into the creation of pivot tab
 </details>
 
 <details>
-<summary><h2><b>Section 10: Trend Report Generation</b></h2></summary>
+<summary><h2><b>Section 10: Report Generation</b></h2></summary>
   
 - In this section, we'll be using the data from our pivot tables to compile a report illustrating the effectiveness of the vulnerability management process throughout the project.
 
@@ -623,11 +623,11 @@ Awesome! In this section, we've taken a deep dive into the creation of pivot tab
 
 <br><br>
 
-***Our Vulnerability Management Report***
+***Our Final Report***
 
 
-Vulnerability Management Analysis Report
-Report Prepared By: Thong Huynh
+Vulnerability Management Analysis Report<br>
+Report Prepared By: Thong Huynh<br>
 Date: 12/23/2023
 
 **Executive Summary**
@@ -675,9 +675,11 @@ The virtual environment was intentionally configured with outdated applications 
 
 The structured approach showcased the effectiveness of a thorough and iterative vulnerability management process. The crafted pivot tables proved invaluable in tracking and reporting on the progress of our remediation efforts, underscoring the importance of such tools in a SOC analyst's repertoire.
 
+***End of Report***
+
 </details>
 
-## Conclusion
+## Reflections
 
-A reflection on the project's outcomes and the importance of continuous vulnerability management in maintaining system security.
+LETS GO!!! In this project, 
 
